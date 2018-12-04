@@ -81,3 +81,57 @@
     50% {opacity: 1;}
     100% {transform: translateY(-100%); opacity: 0;}
 }
+
+/* 定义圆的动画 */
+.pt-page-moveCircle {
+    animation: moveCircle 1.5s ease both;
+}
+
+@keyframes moveCircle {
+    0% {transform: translateY(-80%); opacity: 0.3;}
+    30% {transform: translateY(10%); opacity: 0.7;}
+    60% {transform: translateY(-30%); opacity: 0.8;}
+    70% {transform: translateY(-10%); opacity: 0.9;}
+    100% {transform: translateY(0%); opacity: 1;}
+}
+
+/* 定义缩放的动画 */
+.pt-page-scaleUp {
+    animation: scaleUp 0.7s ease both;
+}
+
+@keyframes scaleUp {
+    from {transform: scale(0.2)}
+    to {}
+}
+
+/* 定义翻转动画 */
+.pt-page-flipInLeft {
+    animation: flipInLeft 0.6s ease both;
+    transform-origin: 50% 50%;
+}
+
+@keyframes flipInLeft {
+    from {transform: rotateY(90deg)}
+    to {}
+}
+/*定义page-5-1*/
+.pt-page-rotateCubeBottomIn{
+	animation:rotateCubeBottomIn .6s ease-in both ;
+	transform-origin: 50% 100%;
+}
+
+@keyframes rotateCubeBottomIn {
+	0%{transform: translateY(-100%) rotateX(90deg);opacity: 0.3}
+	50%{animation-timing-function: ease-out; transform: translateY(-50%) translateZ(-200px) rotateX(45deg);}
+}
+
+.pt-page-rotateCubeTopIn{
+	animation: rotateCubeTopIn 0.6s ease both;
+	transform-origin: 100% 50%;
+}
+
+@keyframes rotateCubeTopIn {
+	0%{translateY(100%) rotateX(-90deg);opacity: 0.3}
+	50%{animation-timing-function: ease-out;transform:translateY(50%) translateZ(-200px) rotateX(-45deg) ;}
+}
